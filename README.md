@@ -1,6 +1,6 @@
 
 <div align="center">
-<img src="src/ddd-banner.webp" alt="ddd" id="ddd-banner"/>
+<img src="src/ddd-banner.png" alt="ddd" id="ddd-banner"/>
 <br><br>
 
 *"Domain modeling is not a matter of making as “realistic” a model as possible. Even in a domain of tangible real-world things, our model is an **artificial creation**. Nor is it just the construction of a software mechanism that gives the necessary results. It is more like moviemaking, **loosely representing reality to a particular purpose**."*
