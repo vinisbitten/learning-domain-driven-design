@@ -15,7 +15,7 @@ describe("Order unit test", () => {
         }).toThrowError("Customer is required");
     });
 
-    it("should have a valid items", () => {
+    it("should have a valid itens", () => {
         expect(() => {
             let order = new Order("123", "123", []);
         }).toThrowError("Must have 1 or more itens");
