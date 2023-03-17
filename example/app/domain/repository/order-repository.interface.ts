@@ -4,6 +4,6 @@ import OrderItem from "../entity/order_item";
 
 export default interface OrderRepositoryInterface extends RepositoryInterface<Order> {
     addOrderItem(order: Order, item: OrderItem): Promise<void>;
-    deleteOrderItem(orderItem: OrderItem): Promise<void>;
-    updateOrderItemQuantity(orderItem: OrderItem): Promise<void>;
+    deleteOrderItem(order: Order, orderItem: OrderItem): Promise<void>;
+    updateOrderItemQuantity(order: Order, orderItem: OrderItem): Promise<void>;
 }

@@ -1,15 +1,9 @@
 
 import Order from "../../domain/entity/order";
 import OrderItem from "../../domain/entity/order_item";
-import Customer from "../../domain/entity/customer";
-import Product from "../../domain/entity/product";
-import CustomerModel from "../database/sequelize/model/customer.model";
-import ProductModel from "../database/sequelize/model/product.model";
 import OrderItemModel from "../database/sequelize/model/order-item.model";
 import OrderModel from "../database/sequelize/model/order.model";
 import OrderRepositoryInterface from "../../domain/repository/order-repository.interface";
-import CustomerRepositoryInterface from "../../domain/repository/customer-repository.interface";
-import ProductRepositoryInterface from "../../domain/repository/product-repository.interface";
 
 export default class OrderRepository implements OrderRepositoryInterface{
     async create(order: Order): Promise<void> {
@@ -42,9 +36,10 @@ export default class OrderRepository implements OrderRepositoryInterface{
             order_id: order.id,
         });
 
+        order.addItem(item);
+
         await OrderModel.update(
             {
-              total: order.total(),
               files: order.itens.map((item) => ({
                 id: item.id,
                 name: item.name,
@@ -52,6 +47,7 @@ export default class OrderRepository implements OrderRepositoryInterface{
                 product_id: item.productId,
                 quantity: item.quantity,
               })),
+              total: order.total(),
             },
             {
               where: { id: order.id },
@@ -59,13 +55,31 @@ export default class OrderRepository implements OrderRepositoryInterface{
           );
     }
 
-    async deleteOrderItem(orderItem: OrderItem): Promise<void> {
+    async deleteOrderItem(order: Order, orderItem: OrderItem): Promise<void> {
         await OrderItemModel.destroy({
             where: { id: orderItem.id },
           });
+
+        order.removeItem(orderItem.id);
+
+        await OrderModel.update(
+            {
+              files: order.itens.map((item) => ({
+                id: item.id,
+                name: item.name,
+                price: item.price,
+                product_id: item.productId,
+                quantity: item.quantity,
+              })),
+              total: order.total(),
+            },
+            {
+              where: { id: order.id },
+            }
+        );
     }
 
-    async updateOrderItemQuantity(orderItem: OrderItem): Promise<void> {
+    async updateOrderItemQuantity(order: Order ,orderItem: OrderItem): Promise<void> {
         await OrderItemModel.update(
             {
               quantity: orderItem.quantity,
@@ -74,6 +88,24 @@ export default class OrderRepository implements OrderRepositoryInterface{
               where: { id: orderItem.id },
             }
           );
+        
+        order.changeItemQuantity(orderItem.id, orderItem.quantity);
+
+        await OrderModel.update(
+            {
+              files: order.itens.map((item) => ({
+                id: item.id,
+                name: item.name,
+                price: item.price,
+                product_id: item.productId,
+                quantity: item.quantity,
+              })),
+              total: order.total(),
+            },
+            {
+              where: { id: order.id },
+            }
+        );
     }
 
     async update(order: Order): Promise<void> {

@@ -179,7 +179,7 @@ describe("Order repository test", () => {
       const order = new Order("123", "123", [orderItem]);
       await orderRepository.create(order);
 
-      await orderRepository.deleteOrderItem(orderItem);
+      await orderRepository.deleteOrderItem(order, orderItem);
 
       const orderModel = await OrderModel.findOne({
         where: { id: order.id },
@@ -220,7 +220,7 @@ describe("Order repository test", () => {
 
       orderItem.changeQuantity(1);
 
-      await orderRepository.updateOrderItemQuantity(orderItem);
+      await orderRepository.updateOrderItemQuantity(order, orderItem);
 
       await orderRepository.update(order);
 
