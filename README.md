@@ -29,7 +29,7 @@ This is a repository to save my learning progress
 
  [Example of Domain-Driven Design](#p02)
 
-* [Example](#t11)
+* [Orderly: A Domain-Driven Design Example for Order Management](#t11)
 
 <br>
 <h2 id="p01">Important terms in Domain-Driven Design</h2>
@@ -87,6 +87,15 @@ This is a repository to save my learning progress
  The repository pattern is a collection of business entities that simplifies the data infrastructure. It releases the domain model from infrastructure concerns. The layering concept enforces the separation of concerns.
 
 <h2 id="p02">Example of Domain-Driven Design</h2>
-<h3 id="t11">Example</h3>
+<h3 id="t11">Orderly: A Domain-Driven Design Example for Order Management</h3>
+<a href="https://github.com/vinisbitten/learning-DDD/tree/main/example/app">The app is here</a>
 
-      To be implemented
+This example is a complete implementation of a relational code for orders, customers, and products using Domain-Driven Design (DDD), Clean Architecture, Sequelize, and TypeScript. The example aims to demonstrate how DDD can be applied to a real-world problem, making the code more maintainable, scalable, and easier to understand.
+
+The code is structured into several layers, following the Clean Architecture principles. The presentation layer contains the controllers that handle incoming requests and send responses. The application layer contains the use cases, which orchestrate the interactions between the different entities and repositories. The domain layer contains the domain entities, value objects, and services, which encapsulate the business logic. Finally, the infrastructure layer contains the implementation details, such as the database access and the ORM.
+
+The example uses the Ubiquitous Language to define the concepts and terms used in the code, making it easier for both domain experts and developers to communicate and understand each other. The code also implements several design patterns, such as the Repository Pattern, to separate the infrastructure concerns from the domain logic, and the Aggregate Pattern, to group related entities and value objects.
+
+The example code uses Sequelize, an ORM for Node.js, to interact with a PostgreSQL database. It defines several models, such as Order, Customer, and Product, and their associations, such as OrderLineItem, which represents a product added to an order. The code also implements the repository pattern for each model, abstracting the database details and allowing the domain entities to remain agnostic of the persistence layer.
+
+Overall, this example demonstrates how DDD can help to create a more expressive, understandable, and maintainable codebase, by focusing on the business logic and encapsulating it in the domain entities and services. The code is also highly testable, since the domain logic is isolated and can be tested independently from the infrastructure details.<n>
