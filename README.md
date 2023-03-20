@@ -88,7 +88,19 @@ This is a repository to save my learning progress
 
 <h2 id="p02">Example of Domain-Driven Design</h2>
 <h3 id="t11">Orderly: A Domain-Driven Design Example for Order Management</h3>
-<a href="https://github.com/vinisbitten/learning-DDD/tree/main/example/app">The app is here</a>
+<>
+<p>If you want to see the code, <a href="https://github.com/vinisbitten/learning-DDD/tree/main/example/app">the app is here</a><p>
+
+```bash
+# clone the repository
+git clone https://github.com/vinisbitten/learning-DDD.git
+
+# install the dependencies
+npm install
+
+# run the tests
+npm test
+```
 
 This example is a complete implementation of a relational code for orders, customers, and products using Domain-Driven Design (DDD), Clean Architecture, Sequelize, and TypeScript. The example aims to demonstrate how DDD can be applied to a real-world problem, making the code more maintainable, scalable, and easier to understand.
 
@@ -98,4 +110,4 @@ The example uses the Ubiquitous Language to define the concepts and terms used i
 
 The example code uses Sequelize, an ORM for Node.js, to interact with a PostgreSQL database. It defines several models, such as Order, Customer, and Product, and their associations, such as OrderLineItem, which represents a product added to an order. The code also implements the repository pattern for each model, abstracting the database details and allowing the domain entities to remain agnostic of the persistence layer.
 
-Overall, this example demonstrates how DDD can help to create a more expressive, understandable, and maintainable codebase, by focusing on the business logic and encapsulating it in the domain entities and services. The code is also highly testable, since the domain logic is isolated and can be tested independently from the infrastructure details.<n>
+Overall, this example demonstrates how DDD can help to create a more expressive, understandable, and maintainable codebase, by focusing on the business logic and encapsulating it in the domain entities and services. The code is also highly testable, since the domain logic is isolated and can be tested independently from the infrastructure details.
