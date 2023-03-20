@@ -94,6 +94,9 @@ This is a repository to save my learning progress
 # clone the repository
 git clone https://github.com/vinisbitten/learning-DDD.git
 
+# go to the example folder
+cd example
+
 # install the dependencies
 npm install
 
