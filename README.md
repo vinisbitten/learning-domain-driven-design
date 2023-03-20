@@ -88,8 +88,7 @@ This is a repository to save my learning progress
 
 <h2 id="p02">Example of Domain-Driven Design</h2>
 <h3 id="t11">Orderly: A Domain-Driven Design Example for Order Management</h3>
-<>
-<p>If you want to see the code, <a href="https://github.com/vinisbitten/learning-DDD/tree/main/example/app">the app is here</a><p>
+<p>If you want to see the code, <a href="https://github.com/vinisbitten/learning-DDD/tree/main/example/app">the app is here</a>. To run it:<p>
 
 ```bash
 # clone the repository
