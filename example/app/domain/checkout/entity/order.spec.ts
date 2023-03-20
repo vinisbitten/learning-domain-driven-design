@@ -1,5 +1,5 @@
 import Order from "./order";
-import OrderItem from "./order_item";
+import OrderItem from "./order-item";
 
 describe("Order unit test", () => {
   it("should have a valid id", () => {

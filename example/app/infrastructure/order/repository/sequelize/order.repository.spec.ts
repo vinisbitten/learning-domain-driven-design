@@ -3,7 +3,7 @@ import { Sequelize } from "sequelize-typescript";
 import Address from "../../../../domain/customer/value-object/address";
 import Customer from "../../../../domain/customer/entity/customer";
 import Order from "../../../../domain/checkout/entity/order";
-import OrderItem from "../../../../domain/checkout/entity/order_item";
+import OrderItem from "../../../../domain/checkout/entity/order-item";
 import Product from "../../../../domain/product/entity/product";
 import CustomerModel from "../../../database/sequelize/model/customer.model";
 import OrderItemModel from "../../../database/sequelize/model/order-item.model";
