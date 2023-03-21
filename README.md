@@ -1,6 +1,6 @@
 
 <div align="center">
-<img src="src/ddd-banner.png" alt="ddd" id="ddd-banner"/>
+<img src="assets/ddd-banner.png" alt="ddd" id="ddd-banner"/>
 <br><br>
 
 *"Domain modeling is not a matter of making as “realistic” a model as possible. Even in a domain of tangible real-world things, our model is an **artificial creation**. Nor is it just the construction of a software mechanism that gives the necessary results. It is more like moviemaking, **loosely representing reality to a particular purpose**."*
@@ -10,11 +10,11 @@ This is a repository to save my learning progress
 </div>
 <br>
 
-<br>
-
 **Summary:**
 
- [Important terms in Domain-Driven Design](#p01)
+<details>
+
+<summary><a href="#p01">Important terms in Domain-Driven Design</a></summary>
 
 * [Domain logic](#t01)
 * [Domain model](#t02)
@@ -27,9 +27,26 @@ This is a repository to save my learning progress
 * [Domain service](#t09)
 * [Repository](#t10)
 
- [Example of Domain-Driven Design](#p02)
+</details>
+
+<details>
+
+<summary> <a href="#p02">Example of Domain-Driven Design</a></summary>
 
 * [Orderly: A Domain-Driven Design Example for Order Management](#t11)
+
+</details>
+
+<details>
+
+<summary><a href="#p03">Books</a></summary>
+
+* [Domain-Driven Design: Tackling Complexity in the Heart of Software](#t12)
+* [Domain-Driven Design Distilled](#t13)
+* [Implementing Domain-Driven Design](#t13)
+* [Clean Code: A Handbook of Agile Software Craftsmanship](#t14)
+
+</details>
 
 <br>
 <h2 id="p01">Important terms in Domain-Driven Design</h2>
@@ -113,3 +130,21 @@ The example uses the Ubiquitous Language to define the concepts and terms used i
 The example code uses Sequelize, an ORM for Node.js, to interact with a PostgreSQL database. It defines several models, such as Order, Customer, and Product, and their associations, such as OrderLineItem, which represents a product added to an order. The code also implements the repository pattern for each model, abstracting the database details and allowing the domain entities to remain agnostic of the persistence layer.
 
 Overall, this example demonstrates how DDD can help to create a more expressive, understandable, and maintainable codebase, by focusing on the business logic and encapsulating it in the domain entities and services. The code is also highly testable, since the domain logic is isolated and can be tested independently from the infrastructure details.
+
+
+<h2 id="p03">Books</h2>
+<h3 id="t12">Domain-Driven Design: Tackling Complexity in the Heart of Software</h3>
+
+ <a href="resources/Domain-Driven Design Tackling Complexity in the Heart of Software.pdf">This book</a> is a great introduction to Domain-Driven Design. It explains the concepts and principles of DDD, and how they can be applied to real-world problems. It also provides several examples of how DDD can be used to create more expressive, understandable, and maintainable codebases.
+
+<h3 id="t13">Domain-Driven Design Distilled</h3>
+
+<a href="resources/Domain-Driven Design Distilled.epub">This book</a> is a concise and practical guide to DDD. It explains the concepts and principles of DDD, and how they can be applied to real-world problems. It also provides several examples of how DDD can be used to create more expressive, understandable, and maintainable codebases.
+
+<h3 id="t14">Implementing Domain-Driven Design</h3>
+
+<a href="resources/Implementing Domain-Driven Design.pdf">This book</a> is a practical guide to implementing DDD in a real-world project. It explains the concepts and principles of DDD, and how they can be applied to real-world problems. It also provides several examples of how DDD can be used to create more expressive, understandable, and maintainable codebases.
+
+<h3 id="t15">Clean Code: A Handbook of Agile Software Craftsmanship</h3>
+
+<a href="resources/Clean Code A Handbook of Agile Software Craftsmanship.pdf">This book</a> is a practical guide to writing clean code. It explains the concepts and principles of clean code, and how they can be applied to real-world problems. It also provides several examples of how clean code can be used to create more expressive, understandable, and maintainable codebases.
